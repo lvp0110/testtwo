@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UYF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"-->
+     <title>Таблица расчета</title>
+     <link rel="stylesheet" href="style2.css">
+     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@trimbleinc/modus-bootstrap@1.5.2/dist/modus.min.css"> -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+     
+     <style for="body">
+    
+
+        .dropdown-menu {
+            display: none;
+           font-size: 15px;
+           color: #6c757d;
+           text-decoration: none;
+           width: 400px;
+        }
+
+        .menu-active {
+            display: block;
+            
+        }
+        .dropdown-item{
+          color: #414447;
+          text-decoration: none;
+          
+        }
+        .my-btn{
+          padding: 1px;
+          margin: 2px 1px 0px 0px;
+          width: 400px;
+          font-family: Arial, Helvetica, sans-serif;
+
+        }
+        .btn-calculation{
+          padding: 8px;
+          margin: 1px 1px 0px 0px;
+          width: 400px;
+          
+        }
+     </style>
+    </head>
+    <body id="body">
+          <div class="container-img">
+            <a target="_blank" href="https://www.acoustic.ru/"><img class="img-fluid" src="./1.jpg">
+            </a>
+          </div>
+          <div class="container_two_line">
+            <p >РАСЧЕТ МАТЕРИАЛОВ</p>
+          </div>
+          
+          <form >
+              <div class="my-btn">
+                <input type="number" id="lenX" class="form-control" placeholder="длина">
+              </div>
+              <div class="my-btn">
+                <input type="number" id="lenZ" class="form-control" placeholder="ширина">
+              </div>
+          </form>
+            <div class="dropdown;min-width: 384px;" >
+              <button data-path="one" class="btn btn-secondary dropdown-toggle" style="min-width: 400px;margin-bottom: 1px
+              ;box-shadow: 0 5px 15px #6c757d" >
+                ЗВУКОИЗОЛИРУЩИЕ ОБЛИЦОВКИ
+              </button>
+              <ul data-target="one" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" id="revetment50" href="#">Облицовка на каркасе 50</a></li>
+                <li><a class="dropdown-item" id="revetment75" href="#">Облицовка на каркасе 75</a></li>
+                <li><a class="dropdown-item" id="revetment100" href="#">Облицовка на каркасе 100</a></li>
+                <li><a class="dropdown-item" id="revetment-wave" href="#">Облицовка на каркасе Wave</a></li>
+                <li><a class="dropdown-item" id="revetment-6027" href="#">Облицовка на каркасе 60/27</a></li>
+              </ul>
+            </div>
+            <div class="dropdown;min-width: 384px;" >
+              <button data-path="two" class="btn btn-secondary dropdown-toggle" style="min-width: 400px;margin-bottom: 1px
+              ;display: block;box-shadow: 0 5px 15px #6c757d" >
+                ЗВУКОИЗОЛИРУЩИЕ ПЕРЕГОРОДКИ
+              </button>
+              <ul data-target="two" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" id="septum50" href="#">Пергородка на каркасе 50</a></li>
+                <li><a class="dropdown-item" id="septum75" href="#">Пергородка на каркасе 75</a></li>
+                <li><a class="dropdown-item" id="septum100" href="#">Пергородка на каркасе 100</a></li>
+                <li><a class="dropdown-item" id="septum-wave" href="#">Пергородка на каркасе Wave</a></li>
+              </ul>
+            </div>
+            <div class="dropdown;min-width: 384px;" >
+              <button data-path="three" class="btn btn-secondary dropdown-toggle" style="min-width: 400px;margin-bottom: 1px
+              ;display: block;box-shadow: 0 5px 15px #6c757d" >
+                ЗВУКОИЗОЛИРУЩИЕ ПОТОЛКИ
+              </button>
+              <ul data-target="three" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#">Потолок на подвесах Виброфлекс-КоннектПП(100мм) </a></li>
+                <li><a class="dropdown-item" href="#">Потолок на подвесах Виброфлекс-К15(130мм)</a></li>
+                <li><a class="dropdown-item" href="#">Потолок на подвесах Виброфлекс-К15(более 200мм)</a></li>
+              </ul>
+            </div>
+            <div class="dropdown;min-width: 384px;" >
+              <button data-path="five" class="btn btn-secondary dropdown-toggle" style="min-width: 400px;margin-bottom: 1px
+              ;display: block;box-shadow: 0 5px 15px #6c757d" >
+                ЗВУКОИЗОЛИРУЩИЕ ПОЛЫ
+              </button>
+              <ul data-target="five" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#">Пол </a></li>
+                <li><a class="dropdown-item" href="#">Пол</a></li>
+                <li><a class="dropdown-item" href="#">Пол</a></li>
+              </ul>
+            </div>
+            <div>
+            </div>
+            <div class="content">
+            </div>
+            
+            <script src="input.js"></script>
+            <script src="button_list.js" ></script>
+            <script src="function_revetment.js"></script>  
+            <script src="function_6027.js"></script>  
+            <script src="function_septum.js"></script>  
+            <script src="table.js"></script>  
+            <script src="table_6027.js"></script>  
+            <script src="table_septum.js"></script>  
+
+          
+  </body>
+</html>
+    
