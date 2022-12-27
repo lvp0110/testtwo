@@ -1,21 +1,22 @@
-//вывод данных на экран(таблица)
 function start(){
+    if(lenX,lenZ === 0){
+        return false;
+    } else{
 const DATA_MATERIAL = {
-    'ПРОФИЛЬ':[
+    [nameConstr4(type_constr)]:[
     ['Профиль ' + profileDepth(type_constr) +', ' + getNumProfilesPN(lenX)*3 +' ' + 'мп',getNumProfilesPN(lenX),'шт'],
     ['Профиль '+ profileDepthPs(type_constr) + ', ' + Math.ceil(lenZ*(lenX/600)/1000) + ' ' + 'мп',getNumProfilesPS(lenZ),'шт'],
- ],
-'МАТЕРИАЛЫ':[
+//  ],
+// 'МАТЕРИАЛЫ':[
     ['Cаундлайн dB ' + ', ' + Math.ceil(lenX*lenZ)/1000000 + ' ' + 'м2',getNumdB(lenX,lenZ),'шт'],
     ['АкуЛайн '+ ', ' + Math.ceil(lenX*lenZ)/1000000 + ' ' + 'м2',getNumakuLain(lenX,lenZ),'шт'],
-    ['Шуманет-Эко '+ ', ' + Math.ceil(lenX*lenZ)/1000000 + ' ' + 'м2',getNumeco(lenX,lenZ),'упак']
-],
-'ПЕРИМЕТР':[
+    ['Шуманет-Эко '+ ', ' + getNumeco(lenX,lenZ)*3 + ' ' + 'м2',getNumeco(lenX,lenZ),'упак'],
+// ],
+// 'ПЕРИМЕТР':[
     ['Вибросил '+', ' + Math.ceil(2*(lenX+lenZ))/1000 + ' ' + 'мп',getNumvbrsil(lenX,lenX),'шт'],
     ['Вибростек-М  ' + widtnVbrstR(type_constr) +', ' + Math.ceil(4*(lenX+lenZ))/1000 + ' ' + 'мп',getNumvbrstR(lenX,lenX),'шт']
 ]
 }
-
 document.querySelector('.content').innerHTML = `<table class="data"></table>`
 for(key in DATA_MATERIAL){
     let row = document.createElement('tr')
@@ -31,6 +32,7 @@ console.log(row);
         
     document.querySelector('.data').appendChild(row)
     console.log(row);
+}
 }
 }
 };

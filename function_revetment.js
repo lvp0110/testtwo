@@ -2,7 +2,27 @@
 // lenZ = Number(prompt('введите значение высоты в мм'));//ввод данных размеров
 // type_constr = Number(prompt('тип конструкции'));
 /**************************************************************************** */
+function nameConstr4(type_constr){
+    let nameConstr4 ;                        // тип направляющего профиля ;
 
+       if(type_constr === 50){
+        nameConstr4 = "Облицовка на каркасе 50/40" ;
+       }
+       else  if (type_constr === 75){
+        nameConstr4 = "Облицовка на каркасе 75/40";
+      } 
+       else  if (type_constr === 100){
+        nameConstr4 = "Облицовка на каркасе 100/40";
+      } 
+       else  if (type_constr === 101){
+        nameConstr4 = "Облицовка на каркасе 100/40";
+      } 
+     
+      else{
+        nameConstr4 = ",Не используется"
+       }
+       return nameConstr4;      
+}
 
 function profileDepth(type_constr){
      let profiledepth ;                        // тип направляющего профиля ;
@@ -74,7 +94,7 @@ function getNumProfilesPN(lnX,lnZ){
         return(profileN = Math.ceil((2*lenX)/3000));
     }
     else if(lenZ > 3000){
-       return(profileNdop = Math.ceil((lenX/600)*connectingProfileLength(type_constr)/3000 + (2*lenX)/3000));  
+       return(profileNdop = Math.ceil(((lenX/600)+1)*connectingProfileLength(type_constr)/3000 + (2*lenX)/3000));  
     }
     
 }
@@ -106,11 +126,18 @@ function getNumdB(lnX,lnZ){
 }
 
 function getNumeco(lnX,lnZ){
-    let eco;                                        //шуманет-эко
-    eco = Math.ceil((lnX*lnZ/3)/1000000);           //расчет гипсокартона 
-    return eco;
+    if(type_constr === 50){
+        return eco = Math.ceil((lenX*lenZ/3)/1000000); 
+        }
+        else if(type_constr === 75){
+           return eco = Math.ceil((lenX*lenZ/3)/1000000); 
+        }
+        else if(type_constr === 100){
+           return eco = Math.ceil((lenX*lenZ/3)/1000000)*2; 
+        }
+       
 }
-
+ 
 function getNumvbrsil(lnZ,lnX){
     let vbrsil;                                     //вибросил
     vbrsil = Math.ceil(((lnX+lnZ)*2)/5000);         //расчет виброил

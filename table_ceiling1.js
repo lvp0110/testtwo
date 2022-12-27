@@ -1,19 +1,17 @@
-function start1(){
+function start4(){
     if(lenX,lenZ === 0){
         return false;
     } else{
 const DATA_MATERIAL = {
-    [nameConstr1(type_constr)]:[
-    ['Профиль  ' + profileDepth1(type_constr) + ', ' + getNumPProf1(lenX,lenZ)*3 + ' ' + 'мп',getNumPProf1(lenX,lenZ),'шт'],
-    ['Профиль  '+ profileDepth2(type_constr) + ', ' + getNumProfilesPS1(lenX,lenZ)*3 + ' ' + 'мп',getNumProfilesPS1(lenZ),'шт'],
-    ['Подвес Виброфлекс  '+ ', ' + vbrstHangingMount1(lenX,lenZ)/*Math.ceil(((lenZ/900)*(lenX/600)+1))*/ + ' ' + 'шт',vbrstHangingMount1(lenX,lenZ),'шт'],
-//  ],
-// 'МАТЕРИАЛЫ':[
+    [nameConstr5(type_constr)]:[
+    ['Профиль  ' + profileDepth5(type_constr) + ', ' + getNumPProf(lenX,lenZ)*3 + ' ' + 'мп',getNumPProf(lenX,lenZ),'шт'],
+    ['Профиль  '+ profileDepth6(type_constr) + ', ' + getNumProPS(lenX,lenZ)*3 + ' ' + 'мп',getNumProPS(lenZ,lenX),'шт'],
+    ['Виброфлекс К15',vbrstHangingMount(lenX,lenZ),'шт'],
+    ['Соединитель двухуровневый  ',connectDuble(lenX,lenZ),'шт'],
+    ['Удлинитель  ',longPs(lenX,lenZ),'шт'],
     ['Cаундлайн dB ' + ', ' + Math.ceil(lenX*lenZ)/1000000 + ' ' + 'м2',getNumdB(lenX,lenZ),'шт'],
     ['АкуЛайн '+ ', ' + Math.ceil(lenX*lenZ)/1000000 + ' ' + 'м2',getNumakuLain(lenX,lenZ),'шт'],
-    ['Шуманет-Эко '+ ', ' + getEco(lenX,lenZ)*3 + ' ' + 'м2',getEco(lenX,lenZ),'упак'],
-// ],
-// 'ПЕРИМЕТР':[
+    ['Шуманет-Эко '+ ', ' + Math.ceil((lenX*lenZ)/1000000)*2 + ' ' + 'м2',getEco(lenX,lenZ)*2,'упак'],
     ['Вибросил '+', ' + Math.ceil(2*(lenX+lenZ))/1000 + ' ' + 'мп',getNumvbrsil(lenX,lenX),'шт'],
     ['Вибростек-М 100 ' +', ' + Math.ceil(4*(lenX+lenZ))/1000 + ' ' + 'мп',getNumvbrst6027(lenX,lenX),'шт']
 ]
@@ -36,4 +34,4 @@ console.log(row);
 }
 }
 }
-}; 
+};

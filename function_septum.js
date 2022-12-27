@@ -1,4 +1,24 @@
+function nameConstr2(type_constr){
+   let nameConstr2 ;                        // тип направляющего профиля ;
 
+      if(type_constr === 50){
+         nameConstr2 = "Перегородка на каркасе 50/40";
+      }
+      else  if (type_constr === 75){
+         nameConstr2 = "Перегородка на каркасе 75/40";
+     } 
+      else  if (type_constr === 100){
+         nameConstr2 = "Перегородка на каркасе 100/40";
+     } 
+      else  if (type_constr === 101){
+         nameConstr2 = "Перегородка на каркасе Wave";
+     } 
+    
+     else{
+      nameConstr2 = ",Не используется"
+      }
+      return nameConstr2;      
+}
 
 
 function profileDepth(type_constr){
@@ -70,14 +90,18 @@ function getNumProfilesPN(lnX,lnZ){
          return(profileN = Math.ceil((2*lenX)/3000));
       }
       else if(lenZ > 3000){
-         return(profileNdop = Math.ceil((lenX/600)*connectingProfileLength(type_constr)/3000 + (2*lenX)/3000));  
+         return(profileNdop = Math.ceil(((lenX/600)+1)*connectingProfileLength(type_constr)/3000 + (2*lenX)/3000));  
       }
       
 }
 
 function getNumProfilesPS(lnZ,lnX){
       let profileS;                                 //кол-во стоечного профиля
-      profileS = Math.ceil(lenZ*(lenX/600)/3000)+1; 
+      if(lenX === 0){
+         profileS = "0";
+     }  else{
+      profileS = Math.ceil(lenZ*(lenX/600)/3000)+1;
+     }
       return profileS;
 }
 
