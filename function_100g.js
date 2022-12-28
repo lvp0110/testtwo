@@ -1,7 +1,7 @@
 function nameConstr6(type_constr){
     let nameConstr6 ; 
      if(type_constr === 200){
-        nameConstr6 = "Пол Шуманет-100Гидро";
+        nameConstr6 = "Пол Шуманет100-Гидро";
        }
      else{
         nameConstr6 = ",Не используется"
@@ -12,7 +12,7 @@ function nameConstr6(type_constr){
 function materialGidro(type_constr){
     let materialGidro ; 
      if(type_constr === 200){
-        materialGidro = "Шуманет-100Гидро";
+        materialGidro = "Шуманет100-Гидро";
        }
        else{
         materialGidro = ",Не используется"

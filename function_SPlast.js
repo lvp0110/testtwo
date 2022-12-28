@@ -12,7 +12,7 @@ function nameConstr8(type_constr){
 function materialSplast(type_constr){
     let materialSplast ; 
      if(type_constr === 201){
-        materialSplast = "Шумопласт";
+        materialSplast = "Шумопласт, гарнулиров.смесь";
        }
        else{
         materialSplast = ",Не используется"

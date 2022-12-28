@@ -6,16 +6,16 @@ const DATA_MATERIAL = {
     [nameConstr1(type_constr)]:[
     ['Профиль  ' + profileDepth1(type_constr) + ', ' + getNumPProf1(lenX,lenZ)*3 + ' ' + 'мп',getNumPProf1(lenX,lenZ),'шт'],
     ['Профиль  '+ profileDepth2(type_constr) + ', ' + getNumProfilesPS1(lenX,lenZ)*3 + ' ' + 'мп',getNumProfilesPS1(lenZ),'шт'],
-    ['Подвес Виброфлекс  '+ ', ' + vbrstHangingMount1(lenX,lenZ)/*Math.ceil(((lenZ/900)*(lenX/600)+1))*/ + ' ' + 'шт',vbrstHangingMount1(lenX,lenZ),'шт'],
+    ['Виброфлекс-КС '+ ', ' + vbrstHangingMount1(lenX,lenZ)/*Math.ceil(((lenZ/900)*(lenX/600)+1))*/ + ' ' + 'шт',vbrstHangingMount1(lenX,lenZ),'шт'],
 //  ],
 // 'МАТЕРИАЛЫ':[
-    ['Cаундлайн dB ' + ', ' + Math.ceil(lenX*lenZ)/1000000 + ' ' + 'м2',getNumdB(lenX,lenZ),'шт'],
-    ['АкуЛайн '+ ', ' + Math.ceil(lenX*lenZ)/1000000 + ' ' + 'м2',getNumakuLain(lenX,lenZ),'шт'],
+    ['Cаундлайн-dB ' + ', ' + Math.ceil(lenX*lenZ)/1000000 + ' ' + 'м2',getNumdB(lenX,lenZ),'шт'],
+    ['Аku-Line ГКЛА Giproc '+ ', ' + Math.ceil(lenX*lenZ)/1000000 + ' ' + 'м2',getNumakuLain(lenX,lenZ),'шт'],
     ['Шуманет-Эко '+ ', ' + getEco(lenX,lenZ)*3 + ' ' + 'м2',getEco(lenX,lenZ),'упак'],
 // ],
 // 'ПЕРИМЕТР':[
     ['Вибросил '+', ' + Math.ceil(2*(lenX+lenZ))/1000 + ' ' + 'мп',getNumvbrsil(lenX,lenX),'шт'],
-    ['Вибростек-М 100 ' +', ' + Math.ceil(4*(lenX+lenZ))/1000 + ' ' + 'мп',getNumvbrst6027(lenX,lenX),'шт']
+    ['Вибростек-М-100 ' +', ' + Math.ceil(4*(lenX+lenZ))/1000 + ' ' + 'мп',getNumvbrst6027(lenX,lenX),'шт']
 ]
 }
 document.querySelector('.content').innerHTML = `<table class="data"></table>`

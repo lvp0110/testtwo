@@ -8,13 +8,13 @@ const DATA_MATERIAL = {
     ['Профиль '+ profileDepthPs(type_constr) + ', ' + Math.ceil(lenZ*(lenX/600)/1000) + ' ' + 'мп',getNumProfilesPS(lenZ),'шт'],
 //  ],
 // 'МАТЕРИАЛЫ':[
-    ['Cаундлайн dB ' + ', ' + Math.ceil(lenX*lenZ)/1000000 + ' ' + 'м2',getNumdB(lenX,lenZ),'шт'],
-    ['АкуЛайн '+ ', ' + Math.ceil(lenX*lenZ)/1000000 + ' ' + 'м2',getNumakuLain(lenX,lenZ),'шт'],
+    ['Cаундлайн-dB ' + ', ' + Math.ceil(lenX*lenZ)/1000000 + ' ' + 'м2',getNumdB(lenX,lenZ),'шт'],
+    ['Аku-Line ГКЛА Giproc'+ ', ' + Math.ceil(lenX*lenZ)/1000000 + ' ' + 'м2',getNumakuLain(lenX,lenZ),'шт'],
     ['Шуманет-Эко '+ ', ' + getNumeco(lenX,lenZ)*3 + ' ' + 'м2',getNumeco(lenX,lenZ),'упак'],
 // ],
 // 'ПЕРИМЕТР':[
     ['Вибросил '+', ' + Math.ceil(2*(lenX+lenZ))/1000 + ' ' + 'мп',getNumvbrsil(lenX,lenX),'шт'],
-    ['Вибростек-М  ' + widtnVbrstR(type_constr) +', ' + Math.ceil(4*(lenX+lenZ))/1000 + ' ' + 'мп',getNumvbrstR(lenX,lenX),'шт']
+    ['Вибростек-М-' + widtnVbrstR(type_constr) +', ' + Math.ceil(4*(lenX+lenZ))/1000 + ' ' + 'мп',getNumvbrstR(lenX,lenX),'шт']
 ]
 }
 document.querySelector('.content').innerHTML = `<table class="data"></table>`

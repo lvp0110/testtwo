@@ -1,7 +1,7 @@
 function nameConstr7(type_constr){
     let nameConstr6 ; 
      if(type_constr === 2001){
-        nameConstr6 = "Пол Шуманет-100Комби";
+        nameConstr6 = "Пол Шуманет100-Комби";
        }
      else{
         nameConstr6 = ",Не используется"
@@ -12,7 +12,7 @@ function nameConstr7(type_constr){
 function materialKomby(type_constr){
     let materialKomby ; 
      if(type_constr === 2001){
-        materialKomby = "Шуманет-100Комби";
+        materialKomby = "Шуманет100-Комби";
        }
        else{
         materialKomby = ",Не используется"

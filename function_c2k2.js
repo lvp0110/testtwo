@@ -12,7 +12,7 @@ function nameConstr9(type_constr){
 function materialC2(type_constr){
     let materialC2 ; 
      if(type_constr === 202){
-        materialC2 = "C2";
+        materialC2 = "Шумостоп-C2";
        }
        else{
         materialC2 = ",Не используется"
@@ -22,7 +22,7 @@ function materialC2(type_constr){
 function materialK2(type_constr){
     let materialK2 ; 
      if(type_constr === 202){
-        materialK2 = "K2";
+        materialK2 = "Шумостоп-K2";
        }
        else{
         materialK2 = ",Не используется"
