@@ -3,20 +3,20 @@ function start2(){
         return false;
     } else{
     const DATA_MATERIAL = {
-        [nameConstr2(type_constr)]:[
-        ['Профиль ' + profileDepth(type_constr) +', ' + getNumProfilesPN(lenX)*3 +' ' + 'мп',getNumProfilesPN(lenX),'шт'],
-        ['Профиль '+ profileDepthPs(type_constr) + ', ' + Math.ceil(lenZ*(lenX/600)/1000) + ' ' + 'мп',getNumProfilesPS(lenZ),'шт'],
+        [nameConstr2(type_constr)+' , '+ ((lenX*lenZ)/1e6).toFixed(1) +' м2']:[
+        ['Профиль ' + profileDepth(type_constr) +', ' + getNumProfilesPN(lenX,lenZ)*3 +' ' + 'мп',getNumProfilesPN(lenX,lenZ),'шт'],
+        ['Профиль '+ profileDepthPs(type_constr) + ', ' + getNumProfilesPS(lenZ,lenX)*3 + ' ' + 'мп',getNumProfilesPS(lenX,lenZ),'шт'],
     //  ],
     // 'МАТЕРИАЛЫ':[
-        ['Cаундлайн-dB ' + ', ' + (lenX*lenZ)/1000000*2 + ' ' + 'м2',getNumdBS(lenX,lenZ),'шт'],
-        ['Аku-Line ГКЛА Giproc '+ ', ' + (lenX*lenZ)/1000000*2 + ' ' + 'м2',getNumakuLainS(lenX,lenZ),'шт'],
-        ['Шуманет-Эко '+ ', ' + getNumecoP(lenX,lenZ)*3 + ' ' + 'м2',getNumecoP(lenX,lenZ),'упак'],
+        ['Cаундлайн-dB ' + ', ' + ((lenX*lenZ)/1000000*2).toFixed(1) + ' ' + 'м2',getNumdBS(lenX,lenZ),'шт'],
+        ['Аku-Line ГКЛА Giproc '+ ', ' + ((lenX*lenZ)/1000000*2).toFixed(1) + ' ' + 'м2',getNumakuLainS(lenX,lenZ),'шт'],
+        ['Шуманет-Эко '+ ', ' + (getNumecoP(lenX,lenZ)*3).toFixed(1) + ' ' + 'м2',Math.ceil(getNumecoP(lenX,lenZ)*1),'упак'],
     // ],
     // 'ПЕРИМЕТР':[
-        ['Вибросил '+', ' + Math.ceil(4*(lenX+lenZ))/1000 + ' ' + 'мп',getNumvbrsil(lenX,lenX)*2,'шт'],
-        ['Вибростек-М-'+ widtnVbrst(type_constr) +', ' + getNumvbrst(lenX,lenX)*((lenX+lenX)*2)/1000 + ' ' + 'мп',getNumvbrst(lenX,lenX),'шт']
+        ['Вибросил '+', ' + ((4*(lenX+lenZ))/1000).toFixed(1) + ' ' + 'мп',Math.ceil(((lenX+lenZ)*2)/5000)*2,'шт'],
+        ['Вибростек-М-'+ widtnVbrst(type_constr) ,getNumvbrst(lenX,lenZ),'шт']
     ]
-    }
+    } 
     document.querySelector('.content').innerHTML = `<table class="data"></table>`
     for(key in DATA_MATERIAL){
         let row = document.createElement('tr')
@@ -35,4 +35,4 @@ function start2(){
     }
     }
    }
-   };
+   }; 

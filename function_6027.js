@@ -29,7 +29,7 @@ function profileDepth2(type_constr){
     }
     return profiledepth2;      
 }
-function getEco(lnX,lnZ){
+function getEco(lenX,lenZ){
     let eco60;
     eco60 = Math.ceil((lenX*lenZ/3)/1000000); 
     return eco60;
@@ -48,10 +48,10 @@ function getNumProfilesPS1(lnZ,lnX){
     console.log(profileS);
     return profileS;
 }
-function getNumvbrst6027(lnX,lnZ){
+function getNumvbrst6027(lenX,lenZ){
     let vbrstR;                                     //вибростек,кол-во упак.
     let perimetr;                                  //периметр конструкции
-    perimetr = Math.ceil(4*(lnX+lnZ));             //начало расчета вибростек
+    perimetr = Math.ceil(4*(lenX+lenZ));             //начало расчета вибростек
     vbrstR = Math.ceil(perimetr/30000);             //конец расчета вибростек
     return vbrstR;
 }

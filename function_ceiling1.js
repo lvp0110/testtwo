@@ -1,7 +1,7 @@
 function nameConstr5(type_constr){
     let nameConstr5 ; 
      if(type_constr === 112){
-        nameConstr5 = "Потолок на подвесах Виброфлекс-К15";
+        nameConstr5 = "Потолок  Виброфлекс-К15";
        }
        else{
         nameConstr5 = ",Не используется"

@@ -1,7 +1,7 @@
 function nameConstr(type_constr){
     let nameConstr ; 
      if(type_constr === 111){
-        nameConstr = "Потолок на подвесах Виброфлекс-КоннектПП";
+        nameConstr = "Потолок  Виброфлекс-КоннектПП";
        }
        else{
         nameConstr = ",Не используется"
@@ -49,7 +49,7 @@ function getNumProPS(lenX,lenZ){
 function getNumvbrst6027(lenX,lenZ){
     let vbrstR;                                     //вибростек,кол-во упак.
     let perimetr;                                  //периметр конструкции
-    perimetr = Math.ceil(4*(lnX+lnZ));             //начало расчета вибростек
+    perimetr = Math.ceil(4*(lenX+lenZ));             //начало расчета вибростек
     vbrstR = Math.ceil(perimetr/30000);             //конец расчета вибростек
     return vbrstR;
 }

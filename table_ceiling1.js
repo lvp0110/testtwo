@@ -3,17 +3,17 @@ function start4(){
         return false;
     } else{
 const DATA_MATERIAL = {
-    [nameConstr5(type_constr)]:[
+    [nameConstr5(type_constr)+' , '+ ((lenX*lenZ)/1e6).toFixed(1) +' м2']:[
     ['Профиль  ' + profileDepth5(type_constr) + ', ' + getNumPProf(lenX,lenZ)*3 + ' ' + 'мп',getNumPProf(lenX,lenZ),'шт'],
     ['Профиль  '+ profileDepth6(type_constr) + ', ' + getNumProPS(lenX,lenZ)*3 + ' ' + 'мп',getNumProPS(lenZ,lenX),'шт'],
     ['Виброфлекс-К15',vbrstHangingMount(lenX,lenZ),'шт'],
     ['Соединитель ПП 27х60  ',connectDuble(lenX,lenZ),'шт'],
     ['Удлинитель ПП 60х27 ',longPs(lenX,lenZ),'шт'],
-    ['Cаундлайн-dB ' + ', ' + Math.ceil(lenX*lenZ)/1000000 + ' ' + 'м2',getNumdB(lenX,lenZ),'шт'],
-    ['Аku-Line ГКЛА Giproc '+ ', ' + Math.ceil(lenX*lenZ)/1000000 + ' ' + 'м2',getNumakuLain(lenX,lenZ),'шт'],
-    ['Шуманет-Эко '+ ', ' + Math.ceil((lenX*lenZ)/1000000)*2 + ' ' + 'м2',getEco(lenX,lenZ)*2,'упак'],
-    ['Вибросил '+', ' + Math.ceil(2*(lenX+lenZ))/1000 + ' ' + 'мп',getNumvbrsil(lenX,lenX),'шт'],
-    ['Вибростек-М-100 ' +', ' + Math.ceil(4*(lenX+lenZ))/1000 + ' ' + 'мп',getNumvbrst6027(lenX,lenX),'шт']
+    ['Cаундлайн-dB ' + ', ' + ((lenX*lenZ)/1000000).toFixed(1) + ' ' + 'м2',getNumdB(lenX,lenZ),'шт'],
+    ['Аku-Line ГКЛА Giproc '+ ', ' + ((lenX*lenZ)/1000000 ).toFixed(1)+ ' ' + 'м2',getNumakuLain(lenX,lenZ),'шт'],
+    ['Шуманет-Эко '+ ', ' + (((lenX*lenZ)/1000000)*2).toFixed(1) + ' ' + 'м2',getEco(lenX,lenZ)*2,'упак'],
+    ['Вибросил '+', ' + ((2*(lenX+lenZ))/1000).toFixed(1) + ' ' + 'мп',Math.ceil(((lenX+lenZ)*2)/5000),'шт'],
+    ['Вибростек-М-100 ' +', ' + ((4*(lenX+lenZ))/1000).toFixed(1) + ' ' + 'мп',Math.ceil((4*(lenX+lenZ))/30000),'шт']
 ]
 }
 document.querySelector('.content').innerHTML = `<table class="data"></table>`

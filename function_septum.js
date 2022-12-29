@@ -81,7 +81,7 @@ function connectingProfileLength(type_constr){  // длина соедините
        } 
 }
 
-function getNumProfilesPN(lnX,lnZ){
+function getNumProfilesPN(lenX,lenZ){
 
       let profileN ;                               //кол-во профиля напрaвляющего
       let profileNdop ;                            //кол-во профиля напрaвляющего при высоте конструкции более 3 м
@@ -94,8 +94,8 @@ function getNumProfilesPN(lnX,lnZ){
       }
       
 }
-
-function getNumProfilesPS(lnZ,lnX){
+ 
+function getNumProfilesPS(lenZ,lenX){
       let profileS;                                 //кол-во стоечного профиля
       if(lenX === 0){
          profileS = "0";
@@ -105,20 +105,22 @@ function getNumProfilesPS(lnZ,lnX){
       return profileS;
 }
 
-function getNumvbrst(lnX,lnZ){
+function getNumvbrst(lenX,lenZ){
       let vbrst;                                     //вибростек,кол-во упак.
-      let perimetr;                                  //периметр конструкции
-      perimetr = Math.ceil(4*(lnX+lnZ));             //начало расчета вибростек
+      let perimetr;
+      let perimetr2;                                  //периметр конструкции
+      perimetr = 4*(lenX+lenZ);             //начало расчета вибростек
+      perimetr2 = 8*(lenX+lenZ);             //начало расчета вибростек
       if(type_constr === 50){                        //конец расчета вибростек
       return vbrst = Math.ceil(perimetr/30000);
       }else if(type_constr === 75){
       return vbrst = Math.ceil(perimetr/30000);
    
       }else if(type_constr === 100){
-      return vbrst = Math.ceil(perimetr/30000)*2;
+      return vbrst = Math.ceil(perimetr2/30000);
    
       }else if(type_constr === 101){
-      return vbrst = Math.ceil(perimetr/30000)*2;
+      return vbrst = Math.ceil(perimetr2/30000);
       }
 }
 
@@ -128,31 +130,31 @@ function getNumakuLainS(lenX,lenZ){
       return akuLainS;
 }
 
-function getNumdBS(lnX,lnZ){
+function getNumdBS(lenX,lenZ){
       let dBs;                                           //саундлайн dB
-      dBs = Math.ceil(((lnX*lnZ)/1.44)/1000000)*2;       //расчет гипсокартона
+      dBs = Math.ceil(((lenX*lenZ)/1.44)/1000000)*2;       //расчет гипсокартона
       return dBs;
 }
 
-function getNumecoP(lnX,lnZ){
+function getNumecoP(lenX,lenZ){
    let eco1; 
       if(type_constr === 50){
-      return eco1 = Math.ceil((lenX*lenZ/3)/1000000); 
+      return eco1 = (lenX*lenZ/3)/1000000; 
       }
       else if(type_constr === 75){
-         return eco1 = Math.ceil((lenX*lenZ/3)/1000000); 
+         return eco1 = (lenX*lenZ/3)/1000000; 
       }
       else if(type_constr === 100){
-         return eco1 = Math.ceil((lenX*lenZ/3)/1000000)*2; 
+         return eco1 = (lenX*lenZ/3)/1000000*2; 
       }
       else if (type_constr === 101){                                   //шуманет-эко
-      return eco1 = Math.ceil((lenX*lenZ/3)/1000000)*2;           //расчет гипсокартона 
+      return eco1 = (lenX*lenZ/3)/1000000*2;           //расчет гипсокартона 
       }  
 }
 
-function getNumvbrsil(lnZ,lnX){
+function getNumvbrsil(lenZ,lenX){
       let vbrsil;                                     //вибросил
-      vbrsil = Math.ceil(((lnX+lnZ)*2)/5000);         //расчет виброcил
+      vbrsil = Math.ceil(((lenX+lenZ)*2)/5000);         //расчет виброcил
       return vbrsil; 
 }
 

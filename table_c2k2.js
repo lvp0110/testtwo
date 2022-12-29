@@ -3,7 +3,7 @@ function start8(){
         return false;
     } else{
 const DATA_MATERIAL = {
-    [nameConstr9(type_constr)]:[
+    [nameConstr9(type_constr)+' , '+ ((lenX*lenZ)/1e6).toFixed(1) +' м2']:[
     [ materialC2(type_constr)  ,getNumС2(lenX,lenZ),'упак'],
     [ materialK2(type_constr)  ,getNumK2(lenX,lenZ),'упак'],
     ['Вибросил ',getNumvbrsil(lenX,lenX)*2,'шт']

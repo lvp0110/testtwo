@@ -3,9 +3,9 @@ function start6(){
         return false;
     } else{
 const DATA_MATERIAL = {
-    [nameConstr7(type_constr)]:[
+    [nameConstr7(type_constr)+' , '+ ((lenX*lenZ)/1e6).toFixed(1) +' м2']:[
     [ materialKomby(type_constr)  ,getNum100g(lenX,lenZ),'шт'],
-    ['Вибросил '+', ' + Math.ceil(2*(lenX+lenZ))/1000 + ' ' + 'мп',getNumvbrsil(lenX,lenX),'шт']
+    ['Вибросил '+', ' + Math.ceil((2*(lenX+lenZ))/1000) + ' ' + 'мп',getNumvbrsil(lenX,lenX),'шт']
     // ['Вибростек-М  ' + widtnVbrstR(type_constr) +', ' + Math.ceil(4*(lenX+lenZ))/1000 + ' ' + 'мп',getNumvbrstR(lenX,lenX),'шт']
 ]
 }
